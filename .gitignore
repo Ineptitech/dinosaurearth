@@ -1,4 +1,5 @@
 DES
-gallery/lib.php
 gallery
+gallery/uploads
 gallery/lib.inc
+package-lock.json
