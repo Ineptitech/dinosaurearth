@@ -1,0 +1,290 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	font-family: sans-serif;
+	vertical-align: baseline;
+  box-sizing: border-box;
+	scroll-behavior: smooth;
+}
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+	position: relative;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+* {
+	cursor: url('../img/dinocon.png'),auto;
+}
+
+:root {
+	--ripple-color: rgba(255,255,255,0.5);
+	--ggs: 1;
+	--slidein: 0;
+}
+
+/* Background */
+
+.bg {
+	z-index: -1;
+	position: fixed;
+	top:0;left: 0;
+	width: 100%;height: 100%;
+	background: no-repeat center/cover url("https://ipsyconh.sirv.com/Images/des/hdr.png?w=1920&webp.fallback=jpg"), #000;
+}
+#three {
+	z-index: -1;
+	position: fixed;
+	top:0;left: 0;
+  width: 100%;height: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+  --poster-color: black;
+}
+/* Nav */
+
+.spacer {
+	width: 100%;height: 64px;
+}
+/* Hide icons by default */
+[class^="icon-"], [class*=" icon-"]{display: none;}
+
+nav {
+	position: fixed;
+	top: 0;left: 0;
+	height: 64px;width: 100%;
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-evenly;
+	align-items: center;
+	background-image: linear-gradient(to bottom, hsla(0, 0%, 0%, 0.5), transparent);
+	z-index: 3;
+}
+nav * {
+	text-decoration: none;
+	color: #fff;
+	font-family: 'Source Sans Pro', sans-serif;
+}
+
+.nav-item {
+	width: 100%; height: 100%;
+
+	text-align: center;
+	font-size: 1.75rem;
+	text-decoration: none;
+	white-space: nowrap;
+	transition: 0.35s ease-in-out background-size;
+}
+.social-item {
+	top: 0; right: -100%;
+	width: 100%; height: 64px;
+	max-height: 16vh;
+	transition: 0.2s right ease-in-out var(--slide-in-delay),
+	0.35s background-size ease-in-out;
+
+}
+.nav-item, 
+.social-item {
+	display: block;
+	position: relative;
+	line-height: 64px;
+	background:
+	no-repeat center/0 0  /* both width and height need to be specified explicitly in order for the animation engine to extrapolate */
+	radial-gradient(
+		var(--ripple-color),
+		rgba(255,255,255,0) 50% 
+	);
+}
+@media only screen and (any-hover) {
+	.nav-item:hover,
+	.social-item:hover {
+		background-size: 128px 128px;
+	}
+	.nav-item:last-of-type:hover .social-item {
+		right: 0;
+	}
+}
+@media only screen and (any-pointer) {
+	.social-expanded .social-item {
+		right: 0;
+	}
+}
+@media only screen and (max-width: 768px) {
+	.ws-label {
+		display: none;
+	}
+	[class^="icon-"], [class*=" icon-"] {
+		display: inline;
+	}
+}
+
+/* Pop-up */
+
+@keyframes slideIn {
+  0% {
+    margin-top: 100vh;
+  }
+  100% {
+    margin-top: calc(calc(100vh - 400px) / 2)
+  }
+}
+.modal {
+	position: fixed;
+	top: 0; left: 0;
+	width: 100%; height: 100%;
+	z-index: 10;
+	background-color: hsla(0,0%,0%,0.4);
+	overflow: hidden;
+	transition: opacity 0.25s;
+}
+.modal-close {
+	opacity: 0;
+	pointer-events: none;
+}
+#modal-x {
+	position: absolute;
+	top: 4px;right: 12px;
+	font-size: 2em;
+	color: hsla(0, 0%, 0%, 0.6);
+}
+#modal-content {
+	position: absolute;
+	width: 360px; height: auto;
+	max-width: 95vw; max-height: 400px;
+	left: 0;right: 0;
+	margin: 0 auto;
+	background-color: hsla(0, 0%, 100%, 0.9);
+	padding: 16px;
+	line-height: 1.3;
+	text-align: center;
+	animation: slideIn 1s ease 1s 2 alternate both;
+}
+#modal-content h2 {
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 1.75em;
+	margin-bottom: 8px;
+}
+#modal-content img {
+	margin: 8px;
+}
+.fuckoff {
+	font-size: 0.8em;
+	white-space: nowrap;
+}
+/* Follower Count */
+
+.canvas-container {
+	display: block;
+	margin: 32px auto;
+	max-width: 500px;
+	text-align: center; /* Centers the canvas */
+}
+#percentage {
+	font-size: 4rem;
+	margin: 32px 0;
+	text-align: center;
+	color: #fff;
+}
+
+.follower-counts>* {
+	font-size: 1.4rem;
+	line-height: 2rem;
+	color: #fff;
+	text-align: center;
+}
+.follower-count::before {
+	content: " Followers: "
+}
+
+.explanation {
+	width: 768px;
+	max-width: 100%;
+	margin: 32px auto;
+	padding: 0 8px;
+	color: #fff
+}
+.explanation h3 {
+	font-size: 1.75rem;
+	margin: 8px 0;
+}
+.explanation p {
+	font-size: 1.125rem;
+	line-height: 1.5rem;
+}
+
+
+
+/* FAQ */
+.faq-container {
+	width: 100%; height: 100%;
+	padding: 10vh 0;
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: center;
+	align-items: center;
+}
+
+.faq {
+	width: 900px;
+	max-width: 100%;
+	background: rgba(255,255,255,0.6);
+	padding: 32px 54px;
+	list-style: lower-roman outside url('../img/dinocon.png');
+}
+.faq-item {
+	margin: 8px 0;
+}
+.q {
+	font-size: 1.5rem;
+	margin: 4px;
+}
+.a {
+	padding: 16px;
+	font-size: 1.1125rem;
+	line-height: 1.2rem;
+}
+@media only screen and (max-width: 700px) {
+	.a {padding: 16px 11px}
+}
+/* Footer */
+footer {
+	position: fixed;
+	bottom: 0;left: 0;
+	width: 100%;
+	color: #fff;
+	font-size: 1.125rem;
+	line-height: 2rem;
+	text-align: center;
+}
