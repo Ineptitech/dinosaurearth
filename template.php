@@ -72,6 +72,7 @@
           <span class="ws-label">Social</span>
           <span class="icon-share"></span>
           <script>
+<<<<<<< HEAD
             function hoverGradient(item) {
               let bgDiam = Math.min(item.offsetWidth, item.firstElementChild.offsetWidth * 2.5) + "px";
               item.style.setProperty('--text-width', bgDiam);
@@ -115,6 +116,51 @@
             <span class="icon-reddit"></span>
           </a>
           <a href="/spotify" target="_blank" rel="noopener noreferrer" class="social-item">
+=======
+            function mobileNav() {
+              document.getElementById("social-nav-item").addEventListener("click", () =>  {this.classList.toggle('social-expanded')});
+            }
+            if (window.matchMedia("(any-hover)").matches) mobileNav();
+          </script>
+          <a href="/twitter" target="_blank" rel="noopener noreferrer" class="social-item" style="
+          --ripple-color: hsla(212, 100%, 56%, 0.8);
+          --slide-in-delay: 75ms;">
+            <span class="ws-label">Twitter</span>
+            <span class="icon-twitter"></span>
+          </a>
+          <a href="/youtube" target="_blank" rel="noopener noreferrer" class="social-item" style="
+          --ripple-color: hsla(0, 100%, 50%, 0.8);
+          --slide-in-delay: 150ms;
+          ">
+            <span class="ws-label">YouTube</span>
+            <span class="icon-youtube"></span>
+          </a>
+          <a href="/discord" target="_blank" rel="noopener noreferrer" class="social-item" style="
+          --ripple-color: hsla(227, 58%, 65%, 0.8);
+          --slide-in-delay: 225ms;
+          ">
+            <span class="ws-label">Discord</span>
+            <span class="icon-discord"></span>
+          </a>
+          <a href="/instagram" target="_blank" rel="noopener noreferrer" class="social-item" style="
+          --ripple-color: rgba(227,46,86,0.8);
+          --slide-in-delay: 300ms;
+          ">
+            <span class="ws-label">Instagram</span>
+            <span class="icon-instagram"></span>
+          </a>
+          <a href="/reddit" target="_blank" rel="noopener noreferrer" class="social-item" style="
+          --ripple-color: rgba(255,69,0,0.8);
+          --slide-in-delay: 375ms;
+          ">
+            <span class="ws-label">Reddit</span>
+            <span class="icon-reddit"></span>
+          </a>
+          <a href="/spotify" target="_blank" rel="noopener noreferrer" class="social-item" style="
+          --ripple-color: rgba(30, 215, 96, 0.8);
+          --slide-in-delay: 450ms;
+          ">
+>>>>>>> master
             <span class="ws-label">Spotify</span>
             <span class="icon-spotify"></span>
           </a>

@@ -9,6 +9,7 @@
     <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
   </head>
   <body>
+<<<<<<< HEAD
     <model-viewer id="three" src="scene.gltf" alt="Real-time satellite footage of the earth" camera-controls auto-rotate auto-rotate-delay="0" skybox-image="https://ipsyconh.sirv.com/Images/des/hdr.png?format=webp&w=2560&webp.fallback=jpg" environment-image="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAAAAAA6fptVAAAACklEQVR4nGPaDwAAxQDCq3EVhQAAAABJRU5ErkJggg==" max-field-of-view="50deg" field-of-view="50deg" exposure="0.6" camera-orbit="-75deg 85deg 105%"></model-viewer>
     <?php echo $nav; ?>
     <?php 
@@ -59,4 +60,10 @@
       window.location = redir;
     }
     </script>
+=======
+    <model-viewer id="three" src="dino.glb" alt="Real-time satellite footage of the earth" camera-controls auto-rotate auto-rotate-delay="0" skybox-image="https://ipsyconh.sirv.com/Images/des/hdr.png?format=webp&w=2560&webp.fallback=jpg"exposure="0.6" camera-orbit="-75deg 85deg 105%"></model-viewer>
+    <?php echo $nav; ?>
+    <?php echo $footer; ?>
+  </body>
+>>>>>>> master
 </html>
