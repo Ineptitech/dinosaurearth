@@ -6,3 +6,4 @@ package-lock.json
 /vendor/
 .phplint-cache
 composer.lock
+package-lock.json
