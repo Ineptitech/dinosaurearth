@@ -72,51 +72,6 @@
           <span class="ws-label">Social</span>
           <span class="icon-share"></span>
           <script>
-<<<<<<< HEAD
-            function hoverGradient(item) {
-              let bgDiam = Math.min(item.offsetWidth, item.firstElementChild.offsetWidth * 2.5) + "px";
-              item.style.setProperty('--text-width', bgDiam);
-            }
-            function desktopNav() {
-              //Make the background gradient a little bit larger than the text in diameter
-              const navItems = document.getElementsByClassName("nav-item");
-              const socialItems = document.getElementsByClassName("social-item");
-              for (i = 0; i < navItems.length; i++) {
-                hoverGradient(navItems[i]);
-              }
-              for ( i = 0; i < socialItems.length; i++) {
-                hoverGradient(socialItems[i]);
-              }
-            }
-            function mobileNav() {
-              document.getElementById("social-nav-item").addEventListener("click", function(){
-                this.classList.toggle('social-expanded')
-              });
-            }
-            (window.matchMedia("(any-hover)").matches) ? (desktopNav()) : (mobileNav());
-          </script>
-          <a href="/twitter" target="_blank" rel="noopener noreferrer" class="social-item">
-            <span class="ws-label">Twitter</span>
-            <span class="icon-twitter"></span>
-          </a>
-          <a href="/youtube" target="_blank" rel="noopener noreferrer" class="social-item">
-            <span class="ws-label">YouTube</span>
-            <span class="icon-youtube"></span>
-          </a>
-          <a href="/discord" target="_blank" rel="noopener noreferrer" class="social-item">
-            <span class="ws-label">Discord</span>
-            <span class="icon-discord"></span>
-          </a>
-          <a href="/instagram" target="_blank" rel="noopener noreferrer" class="social-item">
-            <span class="ws-label">Instagram</span>
-            <span class="icon-instagram"></span>
-          </a>
-          <a href="/reddit" target="_blank" rel="noopener noreferrer" class="social-item">
-            <span class="ws-label">Reddit</span>
-            <span class="icon-reddit"></span>
-          </a>
-          <a href="/spotify" target="_blank" rel="noopener noreferrer" class="social-item">
-=======
             function mobileNav() {
               document.getElementById("social-nav-item").addEventListener("click", () =>  {this.classList.toggle('social-expanded')});
             }
@@ -160,7 +115,6 @@
           --ripple-color: rgba(30, 215, 96, 0.8);
           --slide-in-delay: 450ms;
           ">
->>>>>>> master
             <span class="ws-label">Spotify</span>
             <span class="icon-spotify"></span>
           </a>
