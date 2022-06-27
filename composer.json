@@ -1,0 +1,13 @@
+{
+    "name": "ineptitech/dinosaurearthsociety",
+    "description": "A website for the Dinosaur Earth Society",
+    "type": "project",
+    "license": "UNLICENSED",
+    "authors": [
+        {
+            "name": "Sean",
+            "email": "sean@ineptitech.com"
+        }
+    ],
+    "require": {}
+}
