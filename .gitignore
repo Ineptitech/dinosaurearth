@@ -3,3 +3,6 @@ gallery
 gallery/uploads
 gallery/lib.inc
 package-lock.json
+/vendor/
+.phplint-cache
+composer.lock
